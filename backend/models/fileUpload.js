@@ -6,7 +6,11 @@ const fileUploadSchema = mongoose.Schema({
     
     required: true,
   },
-  fileName: {
+  originalfileName: {
+    type: String,
+    required: true,
+  },
+  newfileName: {
     type: String,
     required: true,
   },

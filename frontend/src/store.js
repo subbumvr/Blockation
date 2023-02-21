@@ -1,12 +1,14 @@
 import {createStore,combineReducers,applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
-
+import { getuploadedFilesReducer, uploadFilesReducer } from './reducers/fileReducer';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import { userReducer } from './reducers/userReducer';
 
 
 const reducer=combineReducers({
-user:userReducer
+user:userReducer,
+file:getuploadedFilesReducer,
+uploadFile:uploadFilesReducer
 })
 
 let initialState={}

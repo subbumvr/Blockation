@@ -13,6 +13,7 @@ const dotenv=require('dotenv');
 const adminRoute=require('./routes/admin')
 const minimist=require('minimist')
 const formidable=require('formidable');
+
 const errorMiddleware=require('../backend/middlewares/error')
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: __dirname+"/config/config.env"});
@@ -28,6 +29,7 @@ connectDataBase();
 
 
 app.use(express.json())
+app.use(express.urlencoded({extended:false}));
 
 //cookie session for passport
 app.use(
