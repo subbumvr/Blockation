@@ -2,6 +2,7 @@ const googleUser=require('../models/googleUser');
 const localUser=require("../models/localUser");
 const ErrorHandler = require('../utils/errorhander');
 const fileUpload=require('../models/fileUpload')
+const Apifeatures=require('../utils/apifeatures')
 //complete that function on later on
 
 exports.getUserDetails=async(req,res,next)=>{
@@ -28,11 +29,16 @@ exports.getUserDetails=async(req,res,next)=>{
 //To get the data of the uploaded file by the user
 exports.getUploadedFileDetails=async(req,res,next)=>{
     if(req.user.displayName){
-    const uploadedFiles=await fileUpload.find({user:req.user.id});
+   
+        const resultPerPage=10;
+    const apiFeature=new Apifeatures(fileUpload.find(),req.query)
+    .search()
+    apiFeature.pagination(resultPerPage)
+   const  uploadedFiles = await apiFeature.query;
     if(uploadedFiles.length===0){
         res.status(200).json({
             success:false,
-            message:"You don't have uploaded any file please upload your files"
+            uploadedFiles:{message:"You don't have uploaded any files"}
         })
     }
 

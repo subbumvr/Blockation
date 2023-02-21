@@ -251,7 +251,7 @@ const Home = () => {
               </div>
               <div class="w-full">
                 <a
-                  href="/user/seeDetails"
+                  href="/account"
                   class="inline-block rounded-full border border-[#D4DEFF] bg-transparent py-4 px-11 text-center text-base font-medium text-primary transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white"
                 >
                  See Details

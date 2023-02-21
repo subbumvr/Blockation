@@ -12,8 +12,12 @@ export const getUploadedFiles=()=>async (dispatch)=>{
         const {data}=await axios.get(`http://localhost:7000/auth/me/uploadedfiles`);
 
 console.log(data)
-        
+        if(data.success===true){
         dispatch({type:GET_FILES_SUCCESS,payload:data.uploadedFiles})
+        }
+        else{
+            dispatch({type:GET_FILES_SUCCESS,payload:"You need to add the data"})
+        }
     }catch(error){
         dispatch({type:GET_FILES_FAIL,payload:error.response.data.message})
     }

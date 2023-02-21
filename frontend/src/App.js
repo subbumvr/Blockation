@@ -10,6 +10,7 @@ import store  from'./store';
 import { laodUser } from "./actions/userAction";
 import UploadFiles from './components/File/UploadFiles.js'
 import axios from "axios";
+import User from './components/User/User.js'
 axios.defaults.withCredentials=true
 function App() {
 
@@ -24,6 +25,7 @@ store.dispatch(laodUser())
   <Routes>
   <Route path="/" element={<Home/>}/>
   <Route path="/file/getAllFiles" element={<GetFiles/>}/>
+  <Route path="/account" element={<User/>}/>
   <Route path="/file/uploadFile" element={<UploadFiles/>}/>
   <Route path="/register" element={<SignUp/>}/>
   <Route path="/login" element={<SignIn/>}/>
