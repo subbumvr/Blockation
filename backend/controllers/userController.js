@@ -7,16 +7,17 @@ const fileUpload=require('../models/fileUpload')
 exports.getUserDetails=async(req,res,next)=>{
         if(req.user.displayName){
             const googleUserDetails=await googleUser.find({googleID:req.user.id})
+
             res.status(200).json({
                 success:true,
-                googleUserDetails
+                userDetails:googleUserDetails[0]
             })
         }
         else if(req.user.password){
             const localUserDetails=await localUser.findById({_id:req.user._id})
             res.status(200).json({
                 success:true,
-                localUserDetails
+                userDetails:localUserDetails
             })
         }
         else{

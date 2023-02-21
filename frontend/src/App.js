@@ -1,14 +1,30 @@
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
+import React from 'react';
+
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import Home from './components/Home/Home.js'
+import SignUp from "./components/User/SignUp.js"
+import SignIn from "./components/User/SignIn.js"
+import store  from'./store';
+import { laodUser } from "./actions/userAction";
+import axios from "axios";
+axios.defaults.withCredentials=true
 function App() {
+
+  React.useEffect(()=>{
+store.dispatch(laodUser())
+  },[])
+
   return (
 <>
 <Header/>
 <Router>
   <Routes>
   <Route path="/" element={<Home/>}/>
+  <Route path="/register" element={<SignUp/>}/>
+  <Route path="/login" element={<SignIn/>}/>
+  
   </Routes>
 </Router>
 <Footer/>
