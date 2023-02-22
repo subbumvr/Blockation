@@ -1,4 +1,4 @@
-import { CLEAR_ERRORS, LOAD_USER_FAIL, LOAD_USER_REQUEST, LOAD_USER_SUCCESS, LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCCESS } from "../constants/userConstants";
+import { CLEAR_ERRORS, LOAD_USER_FAIL, LOAD_USER_REQUEST, LOAD_USER_SUCCESS, LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_SUCCESS } from "../constants/userConstants";
 
 export const userReducer=(state={user:{}},action)=>{
     switch(action.type){
@@ -16,6 +16,13 @@ export const userReducer=(state={user:{}},action)=>{
                 isAuthenticated:true,
                 user:action.payload,
             }
+            case LOGOUT_SUCCESS:
+        return {
+          ...state,
+          loading:false,
+          user:null,
+          isAuthenticated:false
+        }
         case LOGIN_FAIL:
             case LOAD_USER_FAIL:
             return{
@@ -25,6 +32,13 @@ export const userReducer=(state={user:{}},action)=>{
                 user: null,
                 error: action.payload,
             }
+            case LOGIN_FAIL:{
+                return{
+                  ...state,
+                  loading:false,
+                  error:action.payload
+                }
+              }
         case CLEAR_ERRORS:
             return{
                 ...state,

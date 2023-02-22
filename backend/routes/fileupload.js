@@ -24,7 +24,7 @@ let count=0;
   
     
   });
- console.log(count)
+//  console.log(count)
   
   form.on('file',async function (name, file){
   

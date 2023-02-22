@@ -11,8 +11,11 @@ import { laodUser } from "./actions/userAction";
 import UploadFiles from './components/File/UploadFiles.js'
 import axios from "axios";
 import User from './components/User/User.js'
+import { useSelector } from "react-redux";
 axios.defaults.withCredentials=true
 function App() {
+
+const {isAuthenticated}=useSelector(state=>state.user);
 
   React.useEffect(()=>{
 store.dispatch(laodUser())
@@ -23,10 +26,11 @@ store.dispatch(laodUser())
 <Header/>
 <Router>
   <Routes>
+
   <Route path="/" element={<Home/>}/>
-  <Route path="/file/getAllFiles" element={<GetFiles/>}/>
-  <Route path="/account" element={<User/>}/>
-  <Route path="/file/uploadFile" element={<UploadFiles/>}/>
+ { isAuthenticated && <Route path="/file/getAllFiles" element={<GetFiles/>}/>}
+  { isAuthenticated &&<Route path="/account" element={<User/>}/>}
+  { isAuthenticated && <Route path="/file/uploadFile" element={<UploadFiles/>}/>}
   <Route path="/register" element={<SignUp/>}/>
   <Route path="/login" element={<SignIn/>}/>
   

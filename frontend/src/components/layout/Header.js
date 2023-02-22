@@ -1,13 +1,24 @@
 import React, { useRef, useState } from "react";
-
+import { useDispatch, useSelector} from "react-redux"
+import { logout } from "../../actions/userAction";
 const Header = () => {
   const [open, setOpen] = useState(false);
 
   // ===== responsive navbar
   const navbarToggler = useRef(null);
   console.log(navbarToggler);
+ 
+  const dispatch=useDispatch()
   const navbarCollapse = useRef(null);
   console.log(navbarCollapse);
+  const {isAuthenticated}=useSelector(state=>state.user)
+
+
+  function logoutUser(){
+    dispatch(logout())
+    
+ }
+
 
   const toogleBetweenTwo = () => {
     if (open === false) {
@@ -94,28 +105,45 @@ const Header = () => {
                       </a>
                     </li>
                     <div class="flex">
-                      <li>
+                 {isAuthenticated?(    <li>
+                        <a
+                          href="/register"
+                          class="  lg:hidden inline-flex items-center justify-center rounded-lg bg-primary py-2 px-4 text-center  text-white transition duration-300 ease-in-out hover:bg-dark shadow-xl sm:px-10"
+                        >
+                          <span class="text-white">Log Out</span>
+                        </a>
+                      </li>):    (<> <li>
                         <a
                           href="/login"
-                          class="  lg:hidden mx-8 inline-flex items-center justify-center rounded-lg bg-white py-2 px-4 text-center  text-black transition duration-300 ease-in-out hover:text-primary shadow-xl "
+                          class="  lg:hidden mx-2 inline-flex items-center justify-center rounded-lg bg-primary py-2 px-6 text-center  text-black transition duration-300 ease-in-out hover:text-primary shadow-xl "
                         >
                           Sign In
                         </a>
                       </li>
                       <li>
                         <a
-                          href="/register"
-                          class="  lg:hidden inline-flex items-center justify-center rounded-lg bg-primary py-2 px-4 text-center  text-white transition duration-300 ease-in-out hover:bg-dark shadow-xl sm:px-10"
+                          href="/login"
+                          class="  lg:hidden ml-7 inline-flex items-center justify-center rounded-lg bg-primary py-2 px-6 text-center  text-black transition duration-300 ease-in-out hover:text-primary shadow-xl "
                         >
-                          <span class="text-white"> Sign Up</span>
+                          Sign Up
                         </a>
-                      </li>
+                      </li></>)}
+                    
                     </div>
                   </ul>
                 </nav>
               </div>
               <div className="hidden justify-end pr-16 sm:flex lg:pr-0">
-                <a
+              {
+                isAuthenticated?  <button
+              onClick={logoutUser}
+                className="signUpBtn rounded-lg bg-white bg-opacity-20 py-3 px-6 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
+              >
+              Log Out
+              </button>:
+              (
+                <>
+                  <a
                   href="/login"
                   className="loginBtn py-3 px-7 text-base font-medium text-white hover:opacity-70"
                 >
@@ -127,6 +155,10 @@ const Header = () => {
                 >
                   Sign Up
                 </a>
+                </>
+              )
+              }
+              
               </div>
             </div>
           </div>
