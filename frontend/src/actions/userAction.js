@@ -1,6 +1,6 @@
 
 import axios from 'axios'
-import {LOAD_USER_FAIL, LOAD_USER_REQUEST, LOAD_USER_SUCCESS, LOGIN_FAIL,LOGIN_REQUEST,LOGIN_SUCCESS, LOGOUT_FAIL, LOGOUT_SUCCESS} from "../constants/userConstants"
+import {LOAD_USER_FAIL, LOAD_USER_REQUEST, LOAD_USER_SUCCESS, LOGIN_FAIL,LOGIN_REQUEST,LOGIN_SUCCESS, LOGOUT_FAIL, LOGOUT_SUCCESS, REGISTER_USER_FAIL, REGISTER_USER_REQUEST, REGISTER_USER_SUCCESS} from "../constants/userConstants"
 
 //Login User
 export const login=(email,password)=>async (dispatch)=>{
@@ -33,6 +33,27 @@ export const logout=()=>async (dispatch)=>{
         dispatch({type:LOGOUT_FAIL,payload:error.response.data.message})
     }
 }
+
+//Register User
+export const register=(userData)=>async (dispatch)=>{
+    try{
+        dispatch({type:REGISTER_USER_REQUEST})
+        
+    const config = { headers: { "Content-Type": "application/json" } };
+    
+        const {data}=await axios.post(
+            `http://localhost:7000/auth/register`,
+           userData,
+            config,
+        )
+        console.log(data)
+        dispatch({type:REGISTER_USER_SUCCESS,payload:data.newUser})
+    }catch(error){
+        console.log(error)
+        dispatch({type:REGISTER_USER_FAIL,payload:error.message})
+    }
+}
+
 
 
 //Load user details

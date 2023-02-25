@@ -45,19 +45,29 @@ let count=0;
       // console.log(file.newFilename)
       add=add+1;
     //   console.log(add);
-    // console.log(req.user.id+"This is your user id")
+    console.log(req.user._id+"This is your user id")
+    let userId =0
+    if(req.user.displayName){
+      userId=req.user.id;
+    }
+    else{
+      userId=req.user._id
+    }
+    // console.log(userId)
+    
      const uploadedFile=await new fileUpload({
-      user:req.user.id,
+      user:userId,
       originalfileName:file.originalFilename,
       newfileName:file.newFilename,
       cid:cid
      })
      await uploadedFile.save();
       // console.log(uploadedFile)
+      count=count+1;
    if(count===1){
     res.redirect("http://localhost:3000/file/getAllFiles")
    }
-   count=count+1;
+  
   });
   
   

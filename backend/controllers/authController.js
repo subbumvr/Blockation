@@ -33,12 +33,14 @@ exports.registerUser=async(req,res,next)=>{
     if(!name || !email || !password || !confirmPassword){
        next(new ErroHandler('Please fill all the fields below',400))
     }
-    if(password !== confirmPassword){
+    if(password !== confirmPassword){ 
         next(new ErroHandler('Please enter the confirm Password same as password',400))
     }
+    if(password){
     if(password.length <8){
         next(new ErroHandler('The length of the password should be greater than 8',400))
     }
+  }
 
     //validation passed
     let user=await User.findOne({email:email});

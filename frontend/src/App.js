@@ -12,6 +12,8 @@ import UploadFiles from './components/File/UploadFiles.js'
 import axios from "axios";
 import User from './components/User/User.js'
 import { useSelector } from "react-redux";
+import AboutUs from "./components/Main/AboutUs";
+import ContactUs from "./components/Main/ContactUs";
 axios.defaults.withCredentials=true
 function App() {
 
@@ -32,6 +34,8 @@ store.dispatch(laodUser())
   { isAuthenticated &&<Route path="/account" element={<User/>}/>}
   { isAuthenticated && <Route path="/file/uploadFile" element={<UploadFiles/>}/>}
   <Route path="/register" element={<SignUp/>}/>
+  <Route path="/aboutus" element={<AboutUs/>}/>
+  <Route path="/contactus" element={<ContactUs/>}/>
   <Route path="/login" element={<SignIn/>}/>
   
   </Routes>
