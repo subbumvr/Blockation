@@ -21,8 +21,6 @@ let count=0;
     form.parse(req)
   
     form.on('fileBegin', async function  (name, file){
-  
-    
   });
 //  console.log(count)
   
