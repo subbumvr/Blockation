@@ -29,12 +29,14 @@ exports.getUserDetails=async(req,res,next)=>{
 //To get the data of the uploaded file by the user
 exports.getUploadedFileDetails=async(req,res,next)=>{
     if(req.user.displayName){
-   
+
+    const fileCount=await fileUpload.countDocuments({user:req.user.id});
         const resultPerPage=10;
-    const apiFeature=new Apifeatures(fileUpload.find(),req.query)
+    const apiFeature=new Apifeatures(fileUpload.find({user:req.user.id}),req.query)
     .search()
     apiFeature.pagination(resultPerPage)
    const  uploadedFiles = await apiFeature.query;
+   
     if(uploadedFiles.length===0){
         res.status(200).json({
             success:false,
@@ -46,7 +48,9 @@ exports.getUploadedFileDetails=async(req,res,next)=>{
         res.status(201).json({
             success:true,
             message:"Data fetched successfully",
-            uploadedFiles
+            uploadedFiles,
+            resultPerPage,
+            fileCount
         })
     }
 }

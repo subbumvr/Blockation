@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="ud-header absolute top-0 left-0 z-40 flex w-full items-center bg-primary">
+      <div className="ud-header absolute top-0 left-0 z-40 flex w-full items-center bg-transparent">
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">

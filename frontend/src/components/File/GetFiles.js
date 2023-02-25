@@ -45,6 +45,7 @@ function GetFiles() {
                 </tr>
               </thead>
               <tbody>
+               
                 {files &&
                   Array.from(files).map((file) => (
                     <tr class="bg-gray-800 border-gray-700 hover:bg-gray-600">
