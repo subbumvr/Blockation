@@ -56,7 +56,12 @@ exports.getUploadedFileDetails=async(req,res,next)=>{
 }
 else{
     
-    const uploadedFiles=await fileUpload.find({user:req.user._id});
+    const fileCount=await fileUpload.countDocuments({user:req.user._id});
+    const resultPerPage=10;
+const apiFeature=new Apifeatures(fileUpload.find({user:req.user._id}),req.query)
+.search()
+apiFeature.pagination(resultPerPage)
+const  uploadedFiles = await apiFeature.query;
     if(uploadedFiles.length===0){
         res.status(200).json({
             success:false,
@@ -68,7 +73,9 @@ else{
         res.status(201).json({
             success:true,
             message:"Data fetched  successfully",
-            uploadedFiles
+            uploadedFiles,
+            resultPerPage,
+            fileCount
         })
     }
 }

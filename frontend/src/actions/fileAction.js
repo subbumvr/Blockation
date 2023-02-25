@@ -4,16 +4,16 @@ import axios from "axios";
 
 
 //All uploaded file details by the user
-export const getUploadedFiles=()=>async (dispatch)=>{
+export const getUploadedFiles=(currentPage=1,keyword="")=>async (dispatch)=>{
     try{
         dispatch({type:GET_FILES_REQUEST})
         
-   
-        const {data}=await axios.get(`http://localhost:7000/auth/me/uploadedfiles`);
+   console.log(currentPage)
+        const {data}=await axios.get(`http://localhost:7000/auth/me/uploadedfiles?page=${currentPage}&keyword=${keyword}`);
 
 console.log(data)
         if(data.success===true){
-        dispatch({type:GET_FILES_SUCCESS,payload:data.uploadedFiles})
+        dispatch({type:GET_FILES_SUCCESS,payload:data.uploadedFiles,fileCount:data.fileCount,resultPerPage:data.resultPerPage})
         }
         else{
             dispatch({type:GET_FILES_SUCCESS,payload:"You need to add the data"})
@@ -37,7 +37,7 @@ export const uploadFiles=(upload)=>async (dispatch)=>{
             config
         )
         console.log(data)
-        dispatch({type:UPLOAD_FILE_SUCCESS,payload:data.uploadedFiles})
+        dispatch({type:UPLOAD_FILE_SUCCESS,payload:data})
     }catch(error){
         console.log(error)
         dispatch({type:UPLOAD_FILE_FAIL,payload:error.response.data.message})

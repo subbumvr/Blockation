@@ -210,7 +210,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div class="flex flex-wrap items-center justify-center">
+        <div class="flex flex-wrap items-center justify-center" id='uses'>
           <div class="w-full md:w-1/2 lg:w-1/3 px-4 h-54">
             <div
               class="wow fadeInUp relative z-10 mb-10 overflow-hidden rounded-xl border border-primary border-opacity-20 bg-white py-10 px-8 text-center shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-12"

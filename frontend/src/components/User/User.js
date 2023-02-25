@@ -9,6 +9,7 @@ function User() {
     
   return (
  <>
+ <Hero text="Get User Details"/>
  {loading?<Loader/>:<div class="bg-white py-14 lg:py-20">
         <div class="container">
           <div class="max-w-4xl flex items-center justify-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-20">
