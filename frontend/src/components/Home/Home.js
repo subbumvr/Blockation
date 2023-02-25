@@ -1,10 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import Hero from "../layout/Hero"
+import Hero_home from '../layout/Hero_home'
 const Home = () => {
   return (
     <>
-    <Hero text="Home"/>
+    <Hero_home/>
         <section class="pt-20 pb-8 lg:pt-[120px] lg:pb-[70px]">
     <div class="container">
       <div class="-mx-4 flex flex-wrap">
