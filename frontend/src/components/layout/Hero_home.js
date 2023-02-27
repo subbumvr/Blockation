@@ -73,7 +73,7 @@ const Hero_home = () => {
             >
               <div class="mt-16">
                 <img
-                  src="assets/images/hero/hero-image.jpg"
+                  src="/6.png"
                   alt="hero"
                   class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
                 />

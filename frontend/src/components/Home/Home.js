@@ -221,7 +221,7 @@ const Home = () => {
               <span
                 class="mb-2 block text-base font-medium uppercase text-dark"
               >
-                Get Your Details
+                Profile
               </span>
             
 
@@ -236,12 +236,7 @@ const Home = () => {
                 <p
                   class="mb-1 text-base font-medium leading-loose text-body-color"
                 >
-                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                </p>
-                <p
-                  class="mb-1 text-base font-medium leading-loose text-body-color"
-                >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto perferendis distinctio rerum.
+                <img src="/3.png" alt="" />
                 </p>
               </div>
               <div class="w-full">
@@ -273,13 +268,7 @@ const Home = () => {
             
               <div class="mb-10">
                 <p class="mb-1 text-base font-medium leading-loose text-white">
-                  You can Upload your details here
-                </p>
-             
-                <p
-                  class="mb-1 text-base font-medium leading-loose text-white"
-                >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto perferendis distinctio rerum.
+                 <img src="/4.png" alt="" />
                 </p>
               </div>
               <div class="w-full">
@@ -314,12 +303,7 @@ const Home = () => {
               <p
                   class="mb-1 text-base font-medium leading-loose text-body-color"
                 >
-                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                </p>
-                <p
-                  class="mb-1 text-base font-medium leading-loose text-body-color"
-                >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto perferendis distinctio rerum.
+                <img src="/2.png" alt="" />
                 </p>
                 </div>
               <div class="w-full">
