@@ -41,16 +41,18 @@ const AboutUs = () => {
                     to best protect highly vulnerable business applications with
                     interactive panel.
                   </p>
+                  <p class="mb-9 text-base leading-relaxed text-body-color">
                   <a
-                    href="javascript:void(0)"
+                    href="https://linkedin.com"
                     class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
                   >
-                    Learn More
+                 Connect With Us
                   </a>
+                  </p>
                 </div>
                 <div class="text-center">
                   <div class="relative z-10 inline-block">
-                    put your image here
+                   <img src="/7.png" alt="" />
                   </div>
                 </div>
               </div>

@@ -36,13 +36,13 @@ const Header = () => {
 
   return (
     <>
-      <div className="ud-header absolute top-0 left-0 z-40 flex w-full items-center bg-white">
+      <div className="ud-header absolute top-0 left-0 z-40 flex w-full items-center bg-primary">
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
               <a
                 href="index.html"
-                className="navbar-logo block w-full text-dark py-5"
+                className="navbar-logo block w-full text-white py-5"
               >
                 Blockation
               </a>
@@ -67,7 +67,7 @@ const Header = () => {
                     <li className="group relative">
                       <a
                         href="/"
-                        className="ud-menu-scroll mx-8 flex py-2 text-base text-dark group-hover:text-primary lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 lg:text-dark lg:group-hover:text-dark lg:group-hover:opacity-70"
+                        className="ud-menu-scroll mx-8 flex py-2 text-base text-white group-hover:text-primary lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
                       >
                         Home
                       </a>
@@ -75,7 +75,7 @@ const Header = () => {
                     <li className="group relative">
                       <a
                         href="/aboutus"
-                        className="ud-menu-scroll mx-8 flex py-2 text-base text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-dark lg:group-hover:text-dark lg:group-hover:opacity-70 xl:ml-12"
+                        className="ud-menu-scroll mx-8 flex py-2 text-base text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12"
                       >
                         About
                       </a>
@@ -83,7 +83,7 @@ const Header = () => {
                     <li className="group relative">
                       <a
                         href="/#uses"
-                        className="ud-menu-scroll mx-8 flex py-2 text-base text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-dark lg:group-hover:text-dark lg:group-hover:opacity-70 xl:ml-12"
+                        className="ud-menu-scroll mx-8 flex py-2 text-base text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12"
                       >
                        Uses
                       </a>
@@ -91,7 +91,7 @@ const Header = () => {
                     <li className="group relative">
                       <a
                         href="/#team"
-                        className="ud-menu-scroll mx-8 flex py-2 text-base text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-dark lg:group-hover:text-dark lg:group-hover:opacity-70 xl:ml-12"
+                        className="ud-menu-scroll mx-8 flex py-2 text-base text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12"
                       >
                         Team
                       </a>
@@ -99,7 +99,7 @@ const Header = () => {
                     <li className="group relative">
                       <a
                         href="/contactus"
-                        className="ud-menu-scroll mx-8 flex py-2 text-base text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-dark lg:group-hover:text-dark lg:group-hover:opacity-70 xl:ml-12"
+                        className="ud-menu-scroll mx-8 flex py-2 text-base text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12"
                       >
                         Contact
                       </a>
@@ -108,9 +108,9 @@ const Header = () => {
                  {isAuthenticated?(    <li>
                         <a
                           href="/register"
-                          class="  lg:hidden inline-flex items-center justify-center rounded-lg bg-primary py-2 px-4 text-center  text-dark transition duration-300 ease-in-out hover:bg-dark shadow-xl sm:px-10"
+                          class="  lg:hidden inline-flex items-center justify-center rounded-lg bg-primary py-2 px-4 text-center  text-white transition duration-300 ease-in-out hover:bg-dark shadow-xl sm:px-10"
                         >
-                          <span class="text-dark">Log Out</span>
+                          <span class="text-white">Log Out</span>
                         </a>
                       </li>):    (<> <li>
                         <a
@@ -137,7 +137,7 @@ const Header = () => {
               {
                 isAuthenticated?  <button
               onClick={logoutUser}
-                className="signUpBtn rounded-lg bg-white bg-opacity-20 py-3 px-6 text-base font-medium text-dark duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
+                className="signUpBtn rounded-lg bg-white bg-opacity-20 py-3 px-6 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-white"
               >
               Log Out
               </button>:
@@ -145,13 +145,13 @@ const Header = () => {
                 <>
                   <a
                   href="/login"
-                  className="loginBtn py-3 px-7 text-base font-medium text-dark hover:opacity-70"
+                  className="loginBtn py-3 px-7 text-base font-medium text-white hover:opacity-70"
                 >
                   Sign In
                 </a>
                 <a
                   href="/register"
-                  className="signUpBtn rounded-lg bg-white bg-opacity-20 py-3 px-6 text-base font-medium text-dark duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
+                  className="signUpBtn rounded-lg bg-white bg-opacity-20 py-3 px-6 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-white"
                 >
                   Sign Up
                 </a>

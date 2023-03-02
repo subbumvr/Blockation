@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import Hero from "../layout/Hero"
 import Hero_home from '../layout/Hero_home'
+import HomeAbout from '../Main/HomeAbout'
 const Home = () => {
   return (
     <>
@@ -324,6 +325,7 @@ const Home = () => {
         </div>
       </div>
     </section>
+    <HomeAbout/>
   </>
   )
 }

@@ -17,31 +17,22 @@ const Hero_home = () => {
               <h1
                 class="mb-8 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug md:text-[45px] md:leading-snug"
               >
-                Open-Source Web Template for SaaS, Startup, Apps, and More
+              Secure Your Big Ideas... <br /> <span className='text-green-600'>DIGITAL ART WORK.</span> 
               </h1>
               <p
                 class="mx-auto mb-10 max-w-[600px] text-base text-[#e4e4e4] sm:text-lg sm:leading-relaxed md:text-xl md:leading-relaxed"
               >
-                Multidisciplinary Web Template Built with Your Favourite
-                Technology - HTML Bootstrap, Tailwind and React NextJS.
+                Hi Buddy, now you can store and secure your document, artwork ,images & certificates
+                from your drive to IPFS blockchain network. It will just take few simple clicks
               </p>
               <ul class="mb-10 flex flex-wrap items-center justify-center">
                 <li>
                   <a
                     href="https://links.tailgrids.com/play-download"
-                    class="inline-flex items-center justify-center rounded-lg bg-white py-4 px-6 text-center text-base font-medium text-dark transition duration-300 ease-in-out hover:text-primary hover:shadow-lg sm:px-10"
+                    class="inline-flex items-center justify-center rounded-lg bg-green-600 py-4 px-6 text-center text-base font-medium text-white transition duration-300 ease-in-out hover:text-primary hover:shadow-lg sm:px-10"
                   >
-                    Download Now
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/tailgrids/play-tailwind"
-                    target="_blank"
-                    class="flex items-center py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:opacity-70 sm:px-10"
-                  >
-                    Star on Github
-                    <span class="pl-2">
+                   Ready To Secure
+                   <span class="pl-2">
                       <svg
                         width="20"
                         height="8"
@@ -55,6 +46,7 @@ const Hero_home = () => {
                     </span>
                   </a>
                 </li>
+          
               </ul>
               <div class="wow fadeInUp text-center" data-wow-delay=".3s">
                 <img
