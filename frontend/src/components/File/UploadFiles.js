@@ -35,7 +35,7 @@ function UploadFiles() {
           >
             <div class="p-2 md:p-8 text-center lg:text-left">
               <div class="flex justify-start  rounded-full lg:mb-4 shadow-xl mx-auto lg:mx-1 -mt-20 h-48 w-48 bg-cover bg-center">
-                <img className="rounded-full" src="/file.png" alt="" />
+                <img className="rounded-full" src="/10.jpg" alt="" />
               </div>
 
               <div class="p-2 md:p-8 text-center lg:text-left">

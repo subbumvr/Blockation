@@ -47,7 +47,7 @@ exports.registerUser=async(req,res,next)=>{
     if(user){
         next(new ErroHandler('user already Exists please try to login',400))
     }
-    else{
+    else{ 
     const newUser=await new User({
         name,email,password
     })

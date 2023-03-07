@@ -24,11 +24,10 @@ const HomeAbout = () => {
                 <h2
                   class="mb-6 text-3xl font-bold text-dark sm:text-4xl sm:leading-snug 2xl:text-[40px]"
                 >
-                  Brilliant Toolkit to Build Nextgen Website Faster.
+             
                 </h2>
                 <p class="mb-9 text-base leading-relaxed text-body-color">
-                  The main ‘thrust' is to focus on educating attendees on how
-                  to best protect..
+                  Decentralised Believer
                 </p>
                 <p class="mb-9 text-base leading-relaxed text-body-color">
                 <a

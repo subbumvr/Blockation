@@ -23,8 +23,7 @@ const Home = () => {
             <p
               class="text-lg leading-relaxed text-body-color sm:text-xl sm:leading-relaxed"
             >
-              There are many variations of passages of Lorem Ipsum available
-              but the majority have suffered alteration in some form.
+             
             </p>
           </div>
         </div>
@@ -52,10 +51,10 @@ const Home = () => {
               </svg>
             </div>
             <h4 class="mb-3 text-xl font-bold text-dark">
-              Free and Open-Source
+             Totally Decentralised
             </h4>
             <p class="mb-8 text-body-color lg:mb-11">
-              Lorem Ipsum is simply dummy text of the printing and industry.
+            Your credentials are 100% Decentralised
             </p>
             <a
               href="javascript:void(0)"
@@ -90,10 +89,10 @@ const Home = () => {
               </svg>
             </div>
             <h4 class="mb-3 text-xl font-bold text-dark">
-              Multipurpose Template
+             Vault
             </h4>
             <p class="mb-8 text-body-color lg:mb-11">
-              Lorem Ipsum is simply dummy text of the printing and industry.
+            Store your all education credential in one place
             </p>
             <a
               href="javascript:void(0)"
@@ -137,10 +136,10 @@ const Home = () => {
               </svg>
             </div>
             <h4 class="mb-3 text-xl font-bold text-dark">
-              High-quality Design
+             QR Code
             </h4>
             <p class="mb-8 text-body-color lg:mb-11">
-              Lorem Ipsum is simply dummy text of the printing and industry.
+             Get unique QR Code & Hash Id in your wallet
             </p>
             <a
               href="javascript:void(0)"
@@ -175,10 +174,10 @@ const Home = () => {
               </svg>
             </div>
             <h4 class="mb-3 text-xl font-bold text-dark">
-              All Essential Elements
+            Verification
             </h4>
             <p class="mb-8 text-body-color lg:mb-11">
-              Lorem Ipsum is simply dummy text of the printing and industry.
+             Get your credential verified by Universities
             </p>
             <a
               href="javascript:void(0)"

@@ -41,10 +41,10 @@ const Header = () => {
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
               <a
-                href="index.html"
+                href="/"
                 className="navbar-logo block w-full text-white py-5"
               >
-                Blockation
+           <img src="/13.png" alt="" />
               </a>
             </div>
             <div className="flex w-full items-center justify-between px-4">
