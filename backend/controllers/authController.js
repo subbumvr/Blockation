@@ -53,17 +53,18 @@ exports.registerUser=async(req,res,next)=>{
     })
 
     bcrypt.genSalt(10,(err,salt)=> bcrypt.hash(newUser.password,salt,async(err,hash)=>{
-        if(err) {next(new ErroHandler(err.message,400))};
+        if(err) {next(new ErroHandler(err.message,400))}
         //Set the password to the hash
-        newUser.password=hash;
+        else{  newUser.password=hash;
         //Save the user
         await newUser.save();
         res.status(200).json({
             success:true,
             message:"User Registered Successfully",
             newUser
-        })
-
+        })}
+      
+      
     }))
     
 
