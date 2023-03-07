@@ -16,12 +16,12 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="mb-6 inline-block max-w-[160px] text-white"
               >
-                {/* <img
-                  src="assets/images/logo/logo-white.svg"
+                <img
+                  src="/13.png"
                   alt="logo"
                   className="max-w-full"
-                /> */}
-                Blockation
+                />
+          
               </a>
               <p className="mb-7 text-base text-[#f3f4fe]">
                 We create digital experiences for brands and companies by using
