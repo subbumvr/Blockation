@@ -26,7 +26,7 @@ store.dispatch(laodUser())
   return (
 <>
 <Header/>
-<Router>
+<Router basename="/">
   <Routes>
 
   <Route path="/" element={<Home/>}/>
