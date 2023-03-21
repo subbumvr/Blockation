@@ -9,7 +9,7 @@ export const getUploadedFiles=(currentPage=1,keyword="")=>async (dispatch)=>{
         dispatch({type:GET_FILES_REQUEST})
         
    console.log(currentPage)
-        const {data}=await axios.get(`http://localhost:7000/auth/me/uploadedfiles?page=${currentPage}&keyword=${keyword}`);
+        const {data}=await axios.get(`http://3.108.190.13:7000/auth/me/uploadedfiles?page=${currentPage}&keyword=${keyword}`);
 
 console.log(data)
         if(data.success===true){
@@ -32,7 +32,7 @@ export const uploadFiles=(upload)=>async (dispatch)=>{
    
         const config = { headers: { "Content-Type": "application/form-data" } };
         const {data}=await axios.post(
-            `http://localhost:7000/file/sendfile`,
+            `http://3.108.190.13:7000/file/sendfile`,
             upload,
             config
         )
