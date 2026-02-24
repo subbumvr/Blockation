@@ -17,7 +17,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.17.1",
-    "formidable": "^2.1.1",
+    "formidable": "^2.1.5",
     "ipfs-http-client": "^53.0.1",
     "ipfs-mini": "^1.1.5",
     "minimist": "^1.2.7",
