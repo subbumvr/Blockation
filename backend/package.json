@@ -21,7 +21,7 @@
     "ipfs-http-client": "^53.0.1",
     "ipfs-mini": "^1.1.5",
     "minimist": "^1.2.7",
-    "mongoose": "^6.9.0",
+    "mongoose": "^6.11.5",
     "nodemon": "^2.0.14",
     "passport": "^0.5.0",
     "passport-facebook": "^3.0.0",
